@@ -16,36 +16,39 @@ class ScoreCardWidget extends StatelessWidget {
           color: AppColors.white,
           borderRadius: BorderRadius.circular(15),
         ),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Expanded(
-              //iss é para dizer que eles vão ser expandidos na nossa tela para ganhar mais epaço
-              flex: 1,
-              child: ChartWidget(),
-            ),
-            Expanded(
-              flex: 3,
-              child: Padding(
-                padding: const EdgeInsets.only(left: 24),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center, //vertical
-                  crossAxisAlignment: CrossAxisAlignment.start, //horizontal
-                  //Dois textos
-                  children: [
-                    Text(
-                      "Vamos começar",
-                      style: AppTextStyles.heading,
-                    ),
-                    Text(
-                      "Complete os desafios e avançe em conhecimento",
-                      style: AppTextStyles.body,
-                    ),
-                  ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(
+                //iss é para dizer que eles vão ser expandidos na nossa tela para ganhar mais epaço
+                flex: 1,
+                child: ChartWidget(),
+              ),
+              Expanded(
+                flex: 3,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 24),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center, //vertical
+                    crossAxisAlignment: CrossAxisAlignment.start, //horizontal
+                    //Dois textos
+                    children: [
+                      Text(
+                        "Vamos começar",
+                        style: AppTextStyles.heading,
+                      ),
+                      Text(
+                        "Complete os desafios e avançe em conhecimento",
+                        style: AppTextStyles.body,
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
