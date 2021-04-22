@@ -1,0 +1,5 @@
+Quando estamos criando qualquer aplicação
+a gente tem de se preocupar com tres coisas
+1 - Estado de Sucesso
+2 - Estado de Erro 
+3 - Estado de Loading
