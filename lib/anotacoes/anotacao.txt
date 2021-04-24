@@ -3,3 +3,10 @@ a gente tem de se preocupar com tres coisas
 1 - Estado de Sucesso
 2 - Estado de Erro 
 3 - Estado de Loading
+
+
+Desafios de Implementação
+1- Implementar o estado de Erro
+2- Implementar o overlaw do botão o :hover dele
+3- Implementar escolher dar o fedback quando clicado ou 
+direcionar o usuario para uma tela de acerto ou de erro 

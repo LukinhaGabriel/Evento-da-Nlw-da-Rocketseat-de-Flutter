@@ -1,3 +1,4 @@
+import 'package:devquiz/challenge/challenge_page.dart';
 import 'package:devquiz/core/app_colors.dart';
 import 'package:devquiz/home/home_state.dart';
 
@@ -26,7 +27,7 @@ class _HomePageState extends State<HomePage> {
     controller.getQuizzes();
     //addListener ele vai ficar ouvindo tudo que acontecer no stateNotifier
     controller.stateNotifier.addListener(() {
-      setState((){});
+      setState(() {});
     });
   }
 
@@ -77,6 +78,15 @@ class _HomePageState extends State<HomePage> {
                             completed:
                                 "${e.questionAwnsered}/${e.questions.length}",
                             percent: e.questionAwnsered / e.questions.length,
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  //Ele é feito para fazer o builder da nossa página
+                                  MaterialPageRoute(
+                                      builder: (context) => ChallengePage(
+                                            questions: e.questions,
+                                          )));
+                            },
                           ))
                       .toList(),
                 ),
