@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 
 class QuizWidget extends StatefulWidget {
   final QuestionModel question;
-  final VoidCallback onChange;
-  QuizWidget({Key? key, required this.question, required this.onChange})
+  final ValueChanged<bool> onSelected;
+  QuizWidget({Key? key, required this.question, required this.onSelected})
       : super(key: key);
 
   @override
@@ -39,14 +39,14 @@ class _QuizWidgetState extends State<QuizWidget> {
               awnser: awnser(i),
               disable: indexSelected != -1,
               isSelected: indexSelected == i,
-              onTap: () {
+              onTap: (value) {
                 indexSelected = i;
                 //widget.onChange();
                 setState(() {});
                 //cria um delay de 3 segundos e quando acabar o then chama
                 //o Onchange
                 Future.delayed(Duration(seconds: 1))
-                    .then((value) => widget.onChange());
+                    .then((_) => widget.onSelected(value));
               },
             ),
           //... operador de squide vai concatenar a lista

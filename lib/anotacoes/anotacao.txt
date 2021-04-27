@@ -10,3 +10,7 @@ Desafios de Implementação
 2- Implementar o overlaw do botão o :hover dele
 3- Implementar escolher dar o fedback quando clicado ou 
 direcionar o usuario para uma tela de acerto ou de erro 
+4 - Implementar a tela de Parabês e de Erro com base nos acertos e erros
+5- Implementar os filtros de dificuldade
+
+Levando o Aplicativo pro prosimo Nível
